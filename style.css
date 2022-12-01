@@ -417,6 +417,40 @@ header {
 /* MOBILES - Iphone XR + Samsung Galaxy S20 Ultra + Samsung Galaxy A51/71 */
 @media screen and (max-width: 414px) {
   .nav-menu.active {
+    top: 9.5%;
+  }
+}
+
+/* Iphone 12 Pro + Pixel 5 */
+@media screen and (max-width: 393px) {
+  .nav-menu.active {
     top: 10%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .nav-menu.active {
+    top: 13%;
+  }
+}
+
+/* Samsung Galaxy S8 - 360 */
+@media screen and (max-width: 361px) {
+  .nav-menu.active {
+    top: 12%;
+  }
+}
+
+/* Responsive - 346 */
+@media screen and (max-width: 346px) {
+  .nav-menu.active {
+    top: 7%;
+  }
+}
+
+/* Galaxy Fold - 280 */
+@media screen and (max-width: 280px) {
+  .nav-menu.active {
+    top: 13%;
   }
 }
