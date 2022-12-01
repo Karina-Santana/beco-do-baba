@@ -1,0 +1,422 @@
+:root {
+  --primaryColor: rgb(34, 34, 34);
+  --secondBlue: #008bff;
+  --blackShade: #02012b;
+  --container-bg-color: #333;
+  --left-bg-color: rgba(92, 92, 92, 0.3);
+  --left-button-hover-color: #009dff98;
+  --right-bg-color: rgba(43, 43, 43, 0.6);
+  --right-button-hover-color: rgba(92, 92, 92, 0.3);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+}
+
+/* GENERAL */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.scroll-container {
+  width: 100%;
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+}
+
+.scroll-area {
+  display: flex;
+  justify-content: center;
+  color: white;
+  scroll-snap-align: start;
+}
+
+.scroll-area:nth-of-type(1) {
+  background-color: white;
+  height: 100vh;
+}
+
+.scroll-area:nth-of-type(2) {
+  background-color: white;
+  z-index: 4;
+  height: 100vh;
+}
+
+.scroll-area:nth-of-type(3) {
+  background-color: var(--blackShade);
+  height: 100vh;
+}
+
+.scroll-area:nth-of-type(4) {
+  background-color: white;
+  z-index: 4;
+  height: 100vh;
+}
+
+/* HEADER */
+
+header {
+  background-color: var(--primaryColor);
+  white-space: nowrap;
+  align-items: center;
+}
+.nav-logo {
+  height: 70px;
+  vertical-align: middle;
+  margin: 10px 0;
+}
+
+.navbar {
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1% 0 5%;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  position: relative;
+  padding: 10px 30px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+
+  transition: all 0.3s;
+}
+
+.navbar ul li:hover {
+  color: var(--primaryColor);
+  background-color: #07cf0a;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+  color: white;
+}
+
+.arrow-down {
+  color: white;
+}
+
+.uil-angle-right-b {
+  float: right;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+@media (max-width: 1140px) {
+  .hamburger {
+    display: block;
+    margin-right: 15px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 13px 0;
+  }
+
+  .nav-menu.active {
+    top: 12%;
+    left: 0;
+  }
+
+  .arrow-down {
+    display: none;
+  }
+}
+
+/* INTRO - SPLIT SCREEN */
+.home-header {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: -30px;
+  margin-bottom: 30px;
+  height: 100px;
+  background-color: var(--blackShade);
+  padding-top: 33px;
+}
+
+.logo-home {
+  height: 120px;
+  position: absolute;
+  z-index: 5;
+}
+
+/* Customers type */
+
+.split-screen-question {
+  text-align: center;
+}
+
+.h1-futebol,
+.h1-squash {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--container-bg-color);
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  left: 0;
+  background: url("https://img.freepik.com/free-photo/studio-latin-guy-kicking-athlete_1368-1898.jpg?w=996&t=st=1669848069~exp=1669848669~hmac=be8d2067ee89463a3136f81bb0f21f417f09de743a416b72492a58db3ef86495")
+    center center no-repeat;
+  background-size: cover;
+}
+
+.split.left:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--left-bg-color);
+}
+
+.split.right {
+  right: 0;
+  background: url("https://img.freepik.com/free-photo/squash-player-returning-ball_23-2147601831.jpg?w=740&t=st=1669848018~exp=1669848618~hmac=e5dec8a43028108b0449fddc274b1c6ada715a4607887f6c6c2139850d108c5e")
+    center center no-repeat;
+  background-size: cover;
+}
+
+.split.right:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--right-bg-color);
+}
+
+.split.left,
+.split.right,
+.split.right:before,
+.split.left:before {
+  transition: var(--speed) all ease-in-out;
+}
+
+.hover-left .left {
+  width: var(--hover-width);
+}
+
+.hover-left .right {
+  width: var(--other-width);
+}
+
+.hover-right .right {
+  width: var(--hover-width);
+}
+
+.hover-right .left {
+  width: var(--other-width);
+}
+
+.hover-left .right:before {
+  z-index: 2;
+}
+
+.hover-right .left:before {
+  z-index: 2;
+}
+
+/* TABLETS - Surface Pro 7 */
+@media screen and (max-width: 912px) {
+  .logo-home {
+    height: 160px;
+  }
+}
+
+@media (max-width: 800px) {
+  .h1-futebol,
+  .h1-squash {
+    font-size: 2rem;
+  }
+}
+
+/* TABLETS - Surface Duo */
+@media screen and (max-width: 541px) {
+  .h1-futebol,
+  .h1-squash {
+    font-size: 3rem;
+  }
+
+  .logo-home {
+    height: 120px;
+  }
+}
+
+/* MOBILES - Iphone XR + Samsung Galaxy S20 Ultra + Samsung Galaxy A51/71 */
+@media screen and (max-width: 414px) {
+  .h1-futebol,
+  .h1-squash {
+    font-size: 2rem;
+  }
+
+  .logo-home {
+    height: 120px;
+  }
+}
+
+/* MOBILES - Iphone 12 Pro + Pixel 5 */
+@media screen and (max-width: 393px) {
+  .logo-home {
+    height: 100px;
+  }
+}
+
+/* MOBILES - Galaxy Fold */
+@media screen and (max-width: 280px) {
+  .h1-futebol,
+  .h1-squash {
+    font-size: 1.5rem;
+  }
+
+  .logo-home {
+    height: 80px;
+  }
+}
+
+/* RESPONSIVE */
+/* Nest Hub Max - 1280 */
+@media screen and (max-width: 1280px) {
+}
+
+/* Nest Hub - 1024 */
+@media screen and (max-width: 1024px) {
+  .nav-menu.active {
+    top: 15%;
+  }
+}
+
+/* Surface Pro 7 -  912 */
+@media screen and (max-width: 1024px) {
+  .nav-menu.active {
+    top: 6%;
+  }
+}
+
+/* Ipad Air -  820 */
+@media screen and (max-width: 1024px) {
+  .nav-menu.active {
+    top: 7%;
+  }
+}
+
+/* Ipad Mini -  768 */
+@media screen and (max-width: 1024px) {
+  .nav-menu.active {
+    top: 8%;
+  }
+}
+
+/* Surface Duo -  540 */
+@media screen and (max-width: 1024px) {
+  .nav-menu.active {
+    top: 12%;
+  }
+}
+
+/* MOBILES - Iphone XR + Samsung Galaxy S20 Ultra + Samsung Galaxy A51/71 */
+@media screen and (max-width: 414px) {
+  .nav-menu.active {
+    top: 10%;
+  }
+}
