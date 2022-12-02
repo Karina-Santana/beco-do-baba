@@ -1,0 +1,523 @@
+:root {
+  --primaryColor: rgb(34, 34, 34);
+  --secondColor: #07cf0a;
+  --blackShade: #02012b;
+  --container-bg-color: #333;
+  --left-bg-color: rgba(92, 92, 92, 0.3);
+  --left-button-hover-color: #009dff98;
+  --right-bg-color: rgba(43, 43, 43, 0.6);
+  --right-button-hover-color: rgba(92, 92, 92, 0.3);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+}
+
+/* GENERAL */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+/* SCROLLS */
+.scroll-container {
+  width: 100%;
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+}
+
+.scroll-area {
+  display: flex;
+  justify-content: center;
+  color: white;
+  scroll-snap-align: start;
+}
+
+.scroll-area:nth-of-type(1) {
+  background-color: white;
+  height: 100vh;
+}
+
+.scroll-area:nth-of-type(2) {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.scroll-area:nth-of-type(3) {
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.scroll-area:nth-of-type(4) {
+  background-color: white;
+  height: 100vh;
+}
+
+/* HEADER */
+
+header {
+  white-space: nowrap;
+  align-items: center;
+}
+.nav-logo {
+  height: 70px;
+  vertical-align: middle;
+  margin: 10px 0;
+}
+
+.navbar {
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1% 0 5%;
+  width: 100%;
+  background-color: var(--primaryColor);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  position: relative;
+  padding: 10px 30px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+
+  transition: all 0.3s;
+}
+
+.general-link:hover {
+  color: var(--secondColor);
+  cursor: pointer;
+}
+
+/* .navbar ul li:hover {
+    background-color: gray;
+    border-radius: 2px;
+  } */
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* z-index: 10; */
+}
+
+.nav-link {
+  transition: 0.7s ease;
+  color: white;
+}
+
+.contact {
+  background-color: var(--secondColor);
+  color: black;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.contact:hover {
+  color: black;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+@media (max-width: 1140px) {
+  .hamburger {
+    display: block;
+    margin-right: 15px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 13px 0;
+  }
+
+  .nav-menu.active {
+    top: 12%;
+    left: 0;
+  }
+
+  .arrow-down {
+    display: none;
+  }
+}
+
+/* FIRST SECTION - ABOUT */
+.about {
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -50px;
+  /* margin: 50px; */
+}
+
+.about .main img {
+  width: 580px;
+  max-width: 100%;
+  height: auto;
+  padding: 0 10px;
+}
+
+.all-text {
+  width: 600px;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.main {
+  color: black;
+  width: 1290px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.all-text h4 {
+  font-size: 18px;
+  color: #777777;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.all-text h1 {
+  font-size: 65px;
+  color: #111111;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.all-text p {
+  font-size: 16px;
+  color: #777777;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+
+.btn a {
+  background: white;
+  padding: 20px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #111111;
+  border: none;
+  outline: none;
+  box-shadow: 0px 16px 32px 0px rgb(0 0 0 / 6%);
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.btn a:hover {
+  background-color: var(--secondBlue);
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn .btn2 {
+  background: #111111;
+  color: white;
+}
+
+@media screen and (max-width: 1250px) {
+  .about {
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .all-text {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .team-img {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .about .main img {
+    margin-bottom: 35px;
+  }
+
+  .all-text h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+}
+
+/* SECOND SECTION - STORY */
+
+/* .our-story {
+  max-width: 500px;
+}
+
+.story {
+  background: var(--secondBlue);
+  color: #111111;
+  padding: 50px;
+  justify-content: center;
+  display: block;
+  align-items: center;
+}
+
+.story h4 {
+  font-size: 18px;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.story h5 {
+  font-size: 17px;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.story h1 {
+  font-size: 55px;
+  color: #111111;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.story p {
+  font-size: 16px;
+  color: white;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+
+.story-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  margin: 50px;
+  text-align: center;
+}
+
+.story-person img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+} */
+
+/* THIRD SECTION - TEAM */
+
+/* .team-people {
+  gap: 50px;
+  display: block;
+  padding-top: 159px;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-people h4 {
+  font-size: 18px;
+  color: #777777;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.team-people h5 {
+  font-size: 17px;
+  color: #111111;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.team-people p {
+  font-size: 16px;
+  color: #111111;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  margin: 50px;
+  text-align: center;
+  gap: 30px;
+}
+
+.team-person {
+  color: #111111;
+}
+
+.team-img {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+} */
+
+/* RESPONSIVE */
+/* Nest Hub Max - 1280 */
+@media screen and (max-width: 1280px) {
+}
+
+/* Nest Hub - 1024 */
+@media screen and (max-width: 1024px) {
+  .nav-menu.active {
+    top: 15%;
+  }
+}
+
+/* Surface Pro 7 -  912 */
+@media screen and (max-width: 1024px) {
+  .nav-menu.active {
+    top: 6%;
+  }
+}
+
+/* Ipad Air -  820 */
+@media screen and (max-width: 1024px) {
+  .nav-menu.active {
+    top: 7%;
+  }
+}
+
+/* Ipad Mini -  768 */
+@media screen and (max-width: 1024px) {
+  .nav-menu.active {
+    top: 8%;
+  }
+}
+
+/* Surface Duo -  540 */
+@media screen and (max-width: 1024px) {
+  .nav-menu.active {
+    top: 12%;
+  }
+}
+
+/* MOBILES - Iphone XR + Samsung Galaxy S20 Ultra + Samsung Galaxy A51/71 */
+@media screen and (max-width: 414px) {
+  .nav-menu.active {
+    top: 9.5%;
+  }
+}
+
+/* Iphone 12 Pro + Pixel 5 */
+@media screen and (max-width: 393px) {
+  .nav-menu.active {
+    top: 10%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .nav-menu.active {
+    top: 13%;
+  }
+}
+
+/* Samsung Galaxy S8 - 360 */
+@media screen and (max-width: 361px) {
+  .nav-menu.active {
+    top: 12%;
+  }
+}
+
+/* Responsive - 346 */
+@media screen and (max-width: 346px) {
+  .nav-menu.active {
+    top: 7%;
+  }
+}
+
+/* Galaxy Fold - 280 */
+@media screen and (max-width: 280px) {
+  .nav-menu.active {
+    top: 13%;
+  }
+}

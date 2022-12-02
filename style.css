@@ -1,6 +1,6 @@
 :root {
   --primaryColor: rgb(34, 34, 34);
-  --secondBlue: #008bff;
+  --secondColor: #07cf0a;
   --blackShade: #02012b;
   --container-bg-color: #333;
   --left-bg-color: rgba(92, 92, 92, 0.3);
@@ -61,25 +61,26 @@ ul {
 
 .scroll-area:nth-of-type(2) {
   background-color: white;
-  z-index: 4;
   height: 100vh;
 }
 
 .scroll-area:nth-of-type(3) {
-  background-color: var(--blackShade);
   height: 100vh;
 }
 
 .scroll-area:nth-of-type(4) {
-  background-color: white;
-  z-index: 4;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+}
+
+.scroll-area:nth-of-type(5) {
   height: 100vh;
 }
 
 /* HEADER */
 
 header {
-  background-color: var(--primaryColor);
   white-space: nowrap;
   align-items: center;
 }
@@ -96,6 +97,7 @@ header {
   align-items: center;
   padding: 0 1% 0 5%;
   width: 100%;
+  background-color: var(--primaryColor);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -112,23 +114,19 @@ header {
 .navbar ul li a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
-
+  font-size: 18px;
   transition: all 0.3s;
 }
 
-.navbar ul li:hover {
-  color: var(--primaryColor);
-  background-color: #07cf0a;
+.general-link:hover {
+  color: var(--secondColor);
   cursor: pointer;
-  border-radius: 2px;
 }
 
 .nav-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
 }
 
 .nav-link {
@@ -136,14 +134,16 @@ header {
   color: white;
 }
 
-.arrow-down {
-  color: white;
+.contact {
+  background-color: var(--secondColor);
+  color: black;
+  padding: 10px;
+  border-radius: 2px;
 }
 
-.uil-angle-right-b {
-  float: right;
-  margin-left: 10px;
-  align-items: center;
+.contact:hover {
+  background-color: white;
+  color: black;
 }
 
 .hamburger {
@@ -205,26 +205,15 @@ header {
   }
 }
 
-/* INTRO - SPLIT SCREEN */
+/* FIRST SECTION - INTRO - SPLIT SCREEN */
 .home-header {
   width: 100%;
   align-items: center;
   text-align: center;
   justify-content: center;
-  margin-top: -30px;
-  margin-bottom: 30px;
   height: 100px;
-  background-color: var(--blackShade);
-  padding-top: 33px;
+  background-color: var(--primaryColor);
 }
-
-.logo-home {
-  height: 120px;
-  position: absolute;
-  z-index: 5;
-}
-
-/* Customers type */
 
 .split-screen-question {
   text-align: center;
@@ -258,8 +247,7 @@ header {
 
 .split.left {
   left: 0;
-  background: url("https://img.freepik.com/free-photo/studio-latin-guy-kicking-athlete_1368-1898.jpg?w=996&t=st=1669848069~exp=1669848669~hmac=be8d2067ee89463a3136f81bb0f21f417f09de743a416b72492a58db3ef86495")
-    center center no-repeat;
+  background: url("images/soccer-player.jpg") center center no-repeat;
   background-size: cover;
 }
 
@@ -273,8 +261,7 @@ header {
 
 .split.right {
   right: 0;
-  background: url("https://img.freepik.com/free-photo/squash-player-returning-ball_23-2147601831.jpg?w=740&t=st=1669848018~exp=1669848618~hmac=e5dec8a43028108b0449fddc274b1c6ada715a4607887f6c6c2139850d108c5e")
-    center center no-repeat;
+  background: url("images/squash-player.jpg") center center no-repeat;
   background-size: cover;
 }
 
@@ -317,10 +304,477 @@ header {
   z-index: 2;
 }
 
-/* TABLETS - Surface Pro 7 */
+/* SECOND SECTION */
+
+/* THIRD SECTION - REVIEWS - MEDIA  */
+/* media */
+.media {
+  display: block;
+  text-align: center;
+}
+
+.media h3 {
+  color: black;
+  font-size: 2.4rem;
+  padding-top: 10px;
+}
+/* reviews */
+.reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0px;
+  flex-wrap: wrap;
+}
+
+.review-box {
+  width: 300px;
+  background-color: white;
+  border: 1px solid #ececec;
+  margin: 20px;
+}
+
+.review-img {
+  width: 100%;
+  height: auto;
+}
+
+.review-img img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.review-text {
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-text span {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.review-text .review-person {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #272727;
+}
+
+.review-text p {
+  color: #9b9b9b;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 10px 0px;
+}
+
+/* instagram images */
+.media-imgs {
+  display: flex;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.media-imgs img {
+  max-width: 100%;
+  height: auto;
+}
+
+.media-imgs img:hover {
+  opacity: 70%;
+}
+
+/* blog */
+.blog-section {
+  background-color: var(--primaryColor);
+}
+
+#blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 40px 40px 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.blog-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.blog-heading span {
+  color: gray;
+}
+
+.blog-heading h3 {
+  font-size: 2.4rem;
+  color: rgb(206, 206, 206);
+  font-weight: 600;
+}
+
+.blog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0px 20px 0px;
+  flex-wrap: wrap;
+}
+
+.blog-box {
+  width: 250px;
+  background-color: white;
+  border: 1px solid #ececec;
+  margin: 20px;
+}
+
+.blog-img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blog-text {
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-text span {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.blog-text .blog-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #272727;
+}
+
+.blog-text .blog-title:hover {
+  color: var(--secondColor);
+  transition: all ease 0.3s;
+}
+
+.blog-text p {
+  color: #9b9b9b;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 10px 0px;
+}
+
+.blog-text a {
+  color: #0f0f0f;
+}
+
+.blog-text a:hover {
+  color: var(--secondColor);
+  transition: all ease 0.3s;
+}
+
+/* FOURTH SECTION */
+.partners {
+  display: block;
+  text-align: center;
+  justify-content: center;
+}
+
+.companies {
+  color: black;
+  background-color: white;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-top: 3px;
+  height: calc(100vh - 220px);
+  justify-content: center;
+}
+
+.companies h1 {
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+.companies h3 {
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+.companies p {
+  margin-bottom: 40px;
+}
+
+.uil-envelope {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.partners-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  margin: 20px auto 0 auto;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  justify-self: center;
+}
+
+.card h2 {
+  margin-bottom: 5px;
+}
+
+.top {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.bottom a {
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px -8px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: all 1s ease;
+  object-fit: contain;
+  margin: 20px 30px 30px 30px;
+  transition: all 1s ease;
+  position: relative;
+  text-align: center;
+}
+
+.bottom img:hover {
+  transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--primaryColor);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+footer p {
+  margin-top: 20px;
+}
+
+footer ul {
+  position: relative;
+  display: flex;
+}
+
+footer ul li {
+  position: relative;
+  list-style: none;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+footer ul li a {
+  text-decoration: none;
+}
+
+footer ul li a .fa-brands {
+  font-size: 2em;
+  color: white;
+}
+
+footer ul li a::before {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2em;
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+footer ul li:nth-child(1) a::before {
+  content: "\f16d";
+  background-image: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 4px solid #dc2743;
+}
+
+footer ul li:nth-child(2) a::before {
+  content: "\f232";
+  color: #25d366;
+  border-bottom: 4px solid #25d366;
+}
+
+footer ul li:nth-child(3) a::before {
+  content: "\f39e";
+  color: rgb(0, 162, 255);
+  border-bottom: 4px solid rgb(0, 162, 255);
+}
+
+footer ul li:nth-child(4) a::before {
+  content: "\f167";
+  color: red;
+  border-bottom: 4px solid red;
+}
+
+footer ul li:hover a::before {
+  height: 100%;
+}
+
+/* RESPONSIVE */
+/* Nest Hub Max - 1280 */
+@media screen and (max-width: 1280px) {
+}
+
+/* Ipad Air (horizontal) -  1180 */
+@media screen and (max-width: 1180px) {
+  .partners-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin: 20px auto 0 auto;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+/* Nest Hub - 1024 */
+@media screen and (max-width: 1024px) {
+  .nav-menu.active {
+    top: 15%;
+  }
+
+  .partners-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin: 20px auto 0 auto;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .companies h1 {
+    font-size: 30px;
+  }
+
+  .card h2 {
+    font-size: 23px;
+  }
+
+  .bottom img {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+/* Surface Pro 7 -  912 */
 @media screen and (max-width: 912px) {
+  .nav-menu.active {
+    top: 6%;
+  }
+
   .logo-home {
     height: 160px;
+  }
+
+  .partners-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    margin: 20px auto 0 auto;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .companies h1 {
+    font-size: 50px;
+    margin: 50px 0;
+  }
+
+  .companies h3 {
+    margin-top: 70px;
+    font-size: 30px;
+  }
+
+  .companies p {
+    font-size: 20px;
+  }
+
+  .bottom img {
+    width: 350px;
+    height: 200px;
+  }
+}
+
+/* Ipad Air (vertical) -  820 */
+@media screen and (max-width: 820px) {
+  .nav-menu.active {
+    top: 7%;
+  }
+
+  .partners-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin: 20px auto 0 auto;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .companies h3 {
+    margin-top: 70px;
+    font-size: 25px;
+  }
+
+  .companies h1 {
+    font-size: 40px;
+    margin: 50px 0;
+  }
+
+  .bottom img {
+    width: 300px;
+    height: 200px;
   }
 }
 
@@ -331,8 +785,43 @@ header {
   }
 }
 
-/* TABLETS - Surface Duo */
-@media screen and (max-width: 541px) {
+/* Ipad Mini -  768 */
+@media screen and (max-width: 768px) {
+  .nav-menu.active {
+    top: 8%;
+  }
+
+  .partners-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin: 20px auto 0 auto;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .companies h1 {
+    font-size: 40px;
+    margin: 30px;
+  }
+
+  .companies h3 {
+    margin-top: 20px;
+    font-size: 25px;
+  }
+
+  .bottom img {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+/* Surface Duo -  540 */
+@media screen and (max-width: 540px) {
+  .nav-menu.active {
+    top: 12%;
+  }
+
   .h1-futebol,
   .h1-squash {
     font-size: 3rem;
@@ -341,76 +830,40 @@ header {
   .logo-home {
     height: 120px;
   }
-}
 
-/* MOBILES - Iphone XR + Samsung Galaxy S20 Ultra + Samsung Galaxy A51/71 */
-@media screen and (max-width: 414px) {
-  .h1-futebol,
-  .h1-squash {
-    font-size: 2rem;
+  .partners-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin: 0 auto 0 auto;
+    gap: 0px;
+    justify-content: center;
   }
 
-  .logo-home {
-    height: 120px;
-  }
-}
-
-/* MOBILES - Iphone 12 Pro + Pixel 5 */
-@media screen and (max-width: 393px) {
-  .logo-home {
-    height: 100px;
-  }
-}
-
-/* MOBILES - Galaxy Fold */
-@media screen and (max-width: 280px) {
-  .h1-futebol,
-  .h1-squash {
-    font-size: 1.5rem;
+  .companies h1 {
+    font-size: 25px;
+    margin: 10px 0 0 0;
   }
 
-  .logo-home {
-    height: 80px;
+  .companies h2 {
+    font-size: 16px;
+    margin: 10px;
   }
-}
 
-/* RESPONSIVE */
-/* Nest Hub Max - 1280 */
-@media screen and (max-width: 1280px) {
-}
-
-/* Nest Hub - 1024 */
-@media screen and (max-width: 1024px) {
-  .nav-menu.active {
-    top: 15%;
+  .companies h3 {
+    margin-top: 20px;
+    font-size: 16px;
   }
-}
 
-/* Surface Pro 7 -  912 */
-@media screen and (max-width: 1024px) {
-  .nav-menu.active {
-    top: 6%;
+  .companies p {
+    font-size: 14px;
   }
-}
 
-/* Ipad Air -  820 */
-@media screen and (max-width: 1024px) {
-  .nav-menu.active {
-    top: 7%;
-  }
-}
-
-/* Ipad Mini -  768 */
-@media screen and (max-width: 1024px) {
-  .nav-menu.active {
-    top: 8%;
-  }
-}
-
-/* Surface Duo -  540 */
-@media screen and (max-width: 1024px) {
-  .nav-menu.active {
-    top: 12%;
+  .bottom img {
+    width: 200px;
+    height: 150px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -419,12 +872,50 @@ header {
   .nav-menu.active {
     top: 9.5%;
   }
+
+  .h1-futebol,
+  .h1-squash {
+    font-size: 2rem;
+  }
+
+  .logo-home {
+    height: 120px;
+  }
+
+  .partners-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin: 0 auto 0 auto;
+    gap: 0px;
+    justify-content: center;
+  }
+  .bottom img {
+    width: 180px;
+    height: 130px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .companies h3 {
+    margin-top: 40px;
+    font-size: 16px;
+  }
 }
 
 /* Iphone 12 Pro + Pixel 5 */
 @media screen and (max-width: 393px) {
   .nav-menu.active {
     top: 10%;
+  }
+
+  .logo-home {
+    height: 100px;
+  }
+
+  .companies h3 {
+    margin-top: 10px;
+    font-size: 16px;
   }
 }
 
@@ -439,6 +930,30 @@ header {
   .nav-menu.active {
     top: 12%;
   }
+
+  .partners-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    margin: 0 auto 0 auto;
+    gap: 0px;
+    justify-content: center;
+  }
+  .bottom img {
+    width: 150px;
+    height: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .companies h2 {
+    font-size: 14px;
+  }
+
+  .companies h3 {
+    margin-top: 40px;
+    font-size: 16px;
+  }
 }
 
 /* Responsive - 346 */
@@ -446,11 +961,75 @@ header {
   .nav-menu.active {
     top: 7%;
   }
+
+  .partners-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    margin: 0 auto 0 auto;
+    gap: 0px;
+    justify-content: center;
+  }
+  .bottom img {
+    width: 150px;
+    height: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .companies h1 {
+    margin: 30px 0;
+  }
+
+  .companies h3 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
 }
 
 /* Galaxy Fold - 280 */
 @media screen and (max-width: 280px) {
   .nav-menu.active {
     top: 13%;
+  }
+
+  .h1-futebol,
+  .h1-squash {
+    font-size: 1.5rem;
+  }
+
+  .logo-home {
+    height: 80px;
+  }
+
+  .partners-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    margin: 0 auto 0 auto;
+    gap: 0px;
+    justify-content: center;
+  }
+  .bottom img {
+    width: 110px;
+    height: 90px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .companies h1 {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  .companies h2 {
+    font-size: 12px;
+  }
+
+  .companies h3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 16px;
   }
 }
