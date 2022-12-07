@@ -1,0 +1,298 @@
+/* HEADER */
+
+header {
+  white-space: nowrap;
+  align-items: center;
+}
+.nav-logo {
+  height: 70px;
+  vertical-align: middle;
+  margin: 10px 0;
+}
+
+.navbar {
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1% 0 5%;
+  width: 100%;
+  background-color: var(--primaryColor);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  position: relative;
+  padding: 10px 30px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.general-link:hover {
+  color: var(--secondColor);
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+  color: white;
+}
+
+.contact {
+  background-color: var(--secondColor);
+  color: black;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.contact:hover {
+  background-color: white;
+  color: black;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+@media (max-width: 1140px) {
+  .hamburger {
+    display: block;
+    margin-right: 15px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 10;
+  }
+
+  .nav-item {
+    margin: 13px 0;
+  }
+
+  .nav-menu.active {
+    top: 12%;
+    left: 0;
+  }
+
+  .arrow-down {
+    display: none;
+  }
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--primaryColor);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+footer p {
+  margin-top: 20px;
+}
+
+footer ul {
+  position: relative;
+  display: flex;
+}
+
+footer ul li {
+  position: relative;
+  list-style: none;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+footer ul li a {
+  text-decoration: none;
+}
+
+footer ul li a .fa-brands {
+  font-size: 2em;
+  color: white;
+}
+
+footer ul li a::before {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2em;
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+footer ul li:nth-child(1) a::before {
+  content: "\f16d";
+  background-image: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 4px solid #dc2743;
+}
+
+footer ul li:nth-child(2) a::before {
+  content: "\f232";
+  color: #25d366;
+  border-bottom: 4px solid #25d366;
+}
+
+footer ul li:nth-child(3) a::before {
+  content: "\f39e";
+  color: rgb(0, 162, 255);
+  border-bottom: 4px solid rgb(0, 162, 255);
+}
+
+footer ul li:nth-child(4) a::before {
+  content: "\f167";
+  color: red;
+  border-bottom: 4px solid red;
+}
+
+footer ul li:hover a::before {
+  height: 100%;
+}
+
+/* RESPONSIVE */
+
+/* Nest Hub - 1024 */
+@media screen and (max-width: 1024px) {
+  .nav-menu.active {
+    top: 15%;
+  }
+}
+
+/* Surface Pro 7 -  912 */
+@media screen and (max-width: 912px) {
+  .nav-menu.active {
+    top: 6%;
+  }
+
+  .logo-home {
+    height: 160px;
+  }
+}
+
+/* Ipad Air (vertical) -  820 */
+@media screen and (max-width: 820px) {
+  .nav-menu.active {
+    top: 7%;
+  }
+}
+
+/* Ipad Mini -  768 */
+@media screen and (max-width: 768px) {
+  .nav-menu.active {
+    top: 8%;
+  }
+}
+
+/* Surface Duo -  540 */
+@media screen and (max-width: 540px) {
+  .nav-menu.active {
+    top: 12%;
+  }
+}
+
+/* MOBILES - Iphone XR + Samsung Galaxy S20 Ultra + Samsung Galaxy A51/71 */
+@media screen and (max-width: 414px) {
+  .nav-menu.active {
+    top: 9.5%;
+  }
+}
+
+/* Iphone 12 Pro + Pixel 5 */
+@media screen and (max-width: 393px) {
+  .nav-menu.active {
+    top: 10%;
+  }
+
+  .logo-home {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .nav-menu.active {
+    top: 13%;
+  }
+}
+
+/* Samsung Galaxy S8 - 360 */
+@media screen and (max-width: 361px) {
+  .nav-menu.active {
+    top: 12%;
+  }
+}
+
+/* Responsive - 346 */
+@media screen and (max-width: 346px) {
+  .nav-menu.active {
+    top: 7%;
+  }
+}
+
+/* Galaxy Fold - 280 */
+@media screen and (max-width: 280px) {
+  .nav-menu.active {
+    top: 13%;
+  }
+}

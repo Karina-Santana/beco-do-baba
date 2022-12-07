@@ -80,7 +80,7 @@ ul {
 
 /* HEADER */
 
-header {
+/* header {
   white-space: nowrap;
   align-items: center;
 }
@@ -189,6 +189,7 @@ header {
     width: 100%;
     text-align: center;
     transition: 0.3s;
+    z-index: 10;
   }
 
   .nav-item {
@@ -203,7 +204,7 @@ header {
   .arrow-down {
     display: none;
   }
-}
+} */
 
 /* FIRST SECTION - INTRO - SPLIT SCREEN */
 .home-header {
@@ -578,7 +579,7 @@ header {
 }
 
 /* FOOTER */
-footer {
+/* footer {
   background-color: var(--primaryColor);
   display: flex;
   text-align: center;
@@ -660,7 +661,7 @@ footer ul li:nth-child(4) a::before {
 
 footer ul li:hover a::before {
   height: 100%;
-}
+} */
 
 /* RESPONSIVE */
 /* Nest Hub Max - 1280 */
@@ -681,10 +682,6 @@ footer ul li:hover a::before {
 
 /* Nest Hub - 1024 */
 @media screen and (max-width: 1024px) {
-  .nav-menu.active {
-    top: 15%;
-  }
-
   .partners-container {
     width: 100%;
     display: grid;
@@ -710,14 +707,6 @@ footer ul li:hover a::before {
 
 /* Surface Pro 7 -  912 */
 @media screen and (max-width: 912px) {
-  .nav-menu.active {
-    top: 6%;
-  }
-
-  .logo-home {
-    height: 160px;
-  }
-
   .partners-container {
     width: 100%;
     display: grid;
@@ -749,10 +738,6 @@ footer ul li:hover a::before {
 
 /* Ipad Air (vertical) -  820 */
 @media screen and (max-width: 820px) {
-  .nav-menu.active {
-    top: 7%;
-  }
-
   .partners-container {
     width: 100%;
     display: grid;
@@ -787,10 +772,6 @@ footer ul li:hover a::before {
 
 /* Ipad Mini -  768 */
 @media screen and (max-width: 768px) {
-  .nav-menu.active {
-    top: 8%;
-  }
-
   .partners-container {
     width: 100%;
     display: grid;
@@ -818,10 +799,6 @@ footer ul li:hover a::before {
 
 /* Surface Duo -  540 */
 @media screen and (max-width: 540px) {
-  .nav-menu.active {
-    top: 12%;
-  }
-
   .h1-futebol,
   .h1-squash {
     font-size: 3rem;
@@ -869,10 +846,6 @@ footer ul li:hover a::before {
 
 /* MOBILES - Iphone XR + Samsung Galaxy S20 Ultra + Samsung Galaxy A51/71 */
 @media screen and (max-width: 414px) {
-  .nav-menu.active {
-    top: 9.5%;
-  }
-
   .h1-futebol,
   .h1-squash {
     font-size: 2rem;
@@ -905,32 +878,14 @@ footer ul li:hover a::before {
 
 /* Iphone 12 Pro + Pixel 5 */
 @media screen and (max-width: 393px) {
-  .nav-menu.active {
-    top: 10%;
-  }
-
-  .logo-home {
-    height: 100px;
-  }
-
   .companies h3 {
     margin-top: 10px;
     font-size: 16px;
   }
 }
 
-@media screen and (max-width: 375px) {
-  .nav-menu.active {
-    top: 13%;
-  }
-}
-
 /* Samsung Galaxy S8 - 360 */
 @media screen and (max-width: 361px) {
-  .nav-menu.active {
-    top: 12%;
-  }
-
   .partners-container {
     width: 100%;
     display: grid;
@@ -958,10 +913,6 @@ footer ul li:hover a::before {
 
 /* Responsive - 346 */
 @media screen and (max-width: 346px) {
-  .nav-menu.active {
-    top: 7%;
-  }
-
   .partners-container {
     width: 100%;
     display: grid;
@@ -990,10 +941,6 @@ footer ul li:hover a::before {
 
 /* Galaxy Fold - 280 */
 @media screen and (max-width: 280px) {
-  .nav-menu.active {
-    top: 13%;
-  }
-
   .h1-futebol,
   .h1-squash {
     font-size: 1.5rem;
