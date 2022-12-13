@@ -36,14 +36,31 @@
 
 .book-contact h1 {
   margin-bottom: 30px;
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .book-contact h3 {
-  margin-bottom: 30px;
-  font-size: 30px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .book-contact p {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  text-align: start;
+}
+
+.contact-info i {
+  color: var(--secondColor);
+}
+
+.contact-info span {
+  font-weight: bold;
+}
+
+.contact-form-text {
+  font-weight: bold;
+  margin-top: 20px;
 }
