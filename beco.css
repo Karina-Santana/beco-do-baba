@@ -284,7 +284,7 @@ header {
 
 .btn a:hover {
   background-color: var(--secondBlue);
-  color: white;
+  color: var(--secondColor);
   transition: 0.3s;
   cursor: pointer;
 }
@@ -373,6 +373,10 @@ header {
 
 .media-imgs img:hover {
   opacity: 70%;
+}
+
+footer {
+  margin: 10px 0;
 }
 
 /* RESPONSIVE */

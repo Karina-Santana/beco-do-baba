@@ -1,0 +1,39 @@
+.navbar {
+  position: fixed;
+  z-index: 10;
+}
+
+.book-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  margin: 90px auto 0px auto;
+}
+
+.book-container iframe {
+  flex: 0.5;
+}
+
+.book-container .book-contact {
+  flex: 0.5;
+}
+
+.book-contact {
+  margin: 30px;
+}
+
+.book-contact form {
+  flex-direction: column;
+}
+
+.book-contact h1 {
+  margin-bottom: 30px;
+  font-size: 60px;
+}
+
+.book-contact h3 {
+  margin-bottom: 30px;
+  font-size: 30px;
+}

@@ -7,7 +7,7 @@
     <title>Beco do Baba</title>
     <link rel="icon" href="images/logo.png" />
     <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="book.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap"
       rel="stylesheet"
@@ -54,16 +54,28 @@
     </header>
 
 
-    <div class="gallery-container">
-        <div class="gallery-item" data-index="1"><img src="images/inst1.jpeg" alt=""></div>
-        <div class="gallery-item" data-index="2"><img src="images/inst2.png" alt=""></div>
-        <div class="gallery-item" data-index="3"><img src="images/inst3.png" alt=""></div>
-        <div class="gallery-item" data-index="4"><img src="images/inst4.png" alt=""></div>
-        <div class="gallery-item" data-index="5"><img src="images/inst5.png" alt=""></div>
-        <div class="gallery-item" data-index="6"><img src="images/inst6.jpeg" alt=""></div>
-        <div class="gallery-item" data-index="7"><img src="images/inst1.jpeg" alt=""></div>
-        <div class="gallery-item" data-index="8"><img src="images/inst2.png" alt=""></div>
-        <div class="gallery-item" data-index="9"><img src="images/inst3.png" alt=""></div>
+    <div class="book-container">
+        <div class="book-contact">
+            
+            <h3>Quer agendar o campo de futebol, a quadra de squash ou uma aula experimental?</h3>
+            <h1>Agende agora mesmo!</h1>
+            <p>Nos mande uma mensagem que responderemos o mais rápido possível! :)</p>
+
+            <form action="https://formsubmit.co/becodobaba@gmail.com" method="POST">
+                <!-- Lembre que assim que publicar o seu site e vc tentar enviar uma mensagem para o email do Beco do Baba, vamos receber um email do FORMSUBMIT e la vai ter um codigo que podemos substituir o email acima para esconder o nosso email -->
+                <input type="text" name="name" required placeholder="Nome">
+                <input type="email" name="email" required placeholder="E-mail">
+                <input name="message" placeholder="Mensagem">
+                <input type="hidden" name="_subject" value="AGENDAMENTO! Uhuuu!">
+                <!-- <input type="hidden" name="_next"
+                    value="https://karina-santana.github.io/portfolio/obrigado.html"> -->
+                <!-- <input type="hidden" name="_autoresponse" value="Obrigado pelo contato. Nossa equipe vai te responder o mais breve possível."> -->
+                <input type="hidden" name="_captcha" value="false">
+                <button type="submit">Enviar</button>
+           </form>
+        </div>
+
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FBahia&mode=WEEK&hl=pt_BR&showTz=1&showPrint=0&showCalendars=1&showTabs=1&src=YmFlODQ4ZjIxYjU1Y2MyYzI3MWU5MTcxMDFkY2JmMjIyNGQxMDE3OTJlN2Y5Yjg2NjMyNmVkYTRkODZhNWZjMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%238E24AA" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
    
 
@@ -88,5 +100,7 @@
 
   </body>
   <script src="global.js"></script>
-  <script src="gallery.js"></script>
 </html>
+
+
+

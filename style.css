@@ -22,6 +22,7 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   overflow-y: hidden;
+  background-color: var(--primaryColor);
 }
 
 body {
@@ -77,134 +78,6 @@ ul {
 .scroll-area:nth-of-type(5) {
   height: 100vh;
 }
-
-/* HEADER */
-
-/* header {
-  white-space: nowrap;
-  align-items: center;
-}
-.nav-logo {
-  height: 70px;
-  vertical-align: middle;
-  margin: 10px 0;
-}
-
-.navbar {
-  min-height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1% 0 5%;
-  width: 100%;
-  background-color: var(--primaryColor);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-}
-
-.navbar ul li {
-  position: relative;
-  padding: 10px 30px;
-}
-
-.navbar ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  transition: all 0.3s;
-}
-
-.general-link:hover {
-  color: var(--secondColor);
-  cursor: pointer;
-}
-
-.nav-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-link {
-  transition: 0.7s ease;
-  color: white;
-}
-
-.contact {
-  background-color: var(--secondColor);
-  color: black;
-  padding: 10px;
-  border-radius: 2px;
-}
-
-.contact:hover {
-  background-color: white;
-  color: black;
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: white;
-}
-
-@media (max-width: 1140px) {
-  .hamburger {
-    display: block;
-    margin-right: 15px;
-  }
-
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: #262626;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-    z-index: 10;
-  }
-
-  .nav-item {
-    margin: 13px 0;
-  }
-
-  .nav-menu.active {
-    top: 12%;
-    left: 0;
-  }
-
-  .arrow-down {
-    display: none;
-  }
-} */
 
 /* FIRST SECTION - INTRO - SPLIT SCREEN */
 .home-header {
@@ -306,6 +179,9 @@ ul {
 }
 
 /* SECOND SECTION */
+.reviews {
+  background-image: linear-gradient(var(--primaryColor), var(--primaryColor));
+}
 
 /* THIRD SECTION - REVIEWS - MEDIA  */
 /* media */
@@ -578,90 +454,9 @@ ul {
   transform: scale(1.1);
 }
 
-/* FOOTER */
-/* footer {
-  background-color: var(--primaryColor);
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  height: 120px;
-  flex-direction: column;
+footer {
   margin: 10px 0;
 }
-
-footer p {
-  margin-top: 20px;
-}
-
-footer ul {
-  position: relative;
-  display: flex;
-}
-
-footer ul li {
-  position: relative;
-  list-style: none;
-  margin: 0 20px;
-  cursor: pointer;
-}
-
-footer ul li a {
-  text-decoration: none;
-}
-
-footer ul li a .fa-brands {
-  font-size: 2em;
-  color: white;
-}
-
-footer ul li a::before {
-  font-family: "FontAwesome";
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 2em;
-  height: 0;
-  overflow: hidden;
-  transition: 0.3s ease-in-out;
-}
-
-footer ul li:nth-child(1) a::before {
-  content: "\f16d";
-  background-image: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border-bottom: 4px solid #dc2743;
-}
-
-footer ul li:nth-child(2) a::before {
-  content: "\f232";
-  color: #25d366;
-  border-bottom: 4px solid #25d366;
-}
-
-footer ul li:nth-child(3) a::before {
-  content: "\f39e";
-  color: rgb(0, 162, 255);
-  border-bottom: 4px solid rgb(0, 162, 255);
-}
-
-footer ul li:nth-child(4) a::before {
-  content: "\f167";
-  color: red;
-  border-bottom: 4px solid red;
-}
-
-footer ul li:hover a::before {
-  height: 100%;
-} */
 
 /* RESPONSIVE */
 /* Nest Hub Max - 1280 */
@@ -881,6 +676,37 @@ footer ul li:hover a::before {
   .companies h3 {
     margin-top: 10px;
     font-size: 16px;
+  }
+}
+
+/* Iphone SE */
+@media screen and (max-width: 375px) {
+  .partners-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    margin: 0 auto 0 auto;
+    gap: 0px;
+    justify-content: center;
+  }
+  .bottom img {
+    width: 150px;
+    height: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .companies h2 {
+    font-size: 14px;
+  }
+
+  .companies h3 {
+    margin-top: 40px;
+    font-size: 16px;
+  }
+
+  .companies p {
+    margin: 0 10px;
   }
 }
 
