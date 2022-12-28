@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beco do Baba</title>
+    <link rel="icon" href="images/logo.png" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="squash.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="" class="nav-logo" />
+        </a>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link general-link">O Beco</a>
+          </li>
+          <li class="nav-item">
+            <a href="gallery.html" class="nav-link general-link">Galeria</a>
+          </li>
+          <li class="nav-item">
+            <a href="book.html" class="nav-link general-link">Agendamentos</a>
+          </li>        
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link contact">Contato</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <section class="scroll-container">
+      <!-- SECTION 1 -->
+      <div class="scroll-area intro">
+        <div class="intro-container">
+            <div class="intro-left">
+                <img src="images/squash1.jpg" alt="playing squash">
+            </div>
+            <div class="intro-right">
+                <h1>Pratique Squash!</h1>
+                <h2>Além de muito divertido, o esporte traz inúmeros benefícios para a saúde:</h2>
+                <div class="adv-list">
+                    <ul>
+                        <li>Resistência muscular</li>
+                        <li>Melhora a coordenação e os reflexos</li>
+                        <li>Fortalece o coração</li>
+                        <li>Ajuda a perder peso</li>
+                        <li>Age contra o estresse</li>
+                    </ul>
+                    <ul>
+                        <li>Melhora a circulação sanguínea</li>
+                        <li>Desenvolve agilidade e flexibilidade</li>
+                        <li>Previne hipertensão e diabetes</li>
+                        <li>Fortalece toda a musculatura</li>
+                        <li>Modela o corpo</li>
+                    </ul>
+                </div>
+                
+                <h3>Garanta a sua aula experimental!</h3>
+                <a href="contact.html">Contato</a>
+            </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2 -->
+      <div class="scroll-area advantages">
+        <div class="advantages-container">
+            <div class="advantages-left">
+                <h1>Você sabia?</h1>
+                <h2>O Squash é considerado o esporte mais <span> saudável</span> do mundo!</h2>
+                <p>Pois é, de acordo com a revista americana <a href="https://www.forbes.com/2003/10/01/cx_ns_1001feat.html?sh=2b71a6f185c8">Forbes</a>, o Squash foi eleito o esporte mais saudável, deixando para trás natação, remo e escalada!</p>
+                <p>O estudo foi feito de acordo com seis vertentes: consumo calórico, resistência cardiorespiratória, força muscular, resistência muscular, risco de lesão e flexibilidade.</p>
+                <p>O esporte foi classificado com os melhores resultados e por isso é considerado o esporte mais saudável do mundo. Legal né? :)</p>
+                
+            </div>
+            <div class="advantages-right">
+                <img src="images/squash2.jpg" alt="">
+            </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3 -->
+      <div class="scroll-area booking">
+        <div class="booking-container">
+            <div class="booking-left">
+                <img src="images/squash3.jpg" alt="">
+            </div>
+            <div class="booking-middle">
+                <h1>Quer agendar a quadra ou uma aula experimental?</h1>
+                <p>Cheque os nossos horários livres e nos mande uma mensagem que responderemos o mais rápido possível! :)</p>
+                
+                <form action="https://formsubmit.co/6c4b1b5a4bf015bc977bff9e8fcf0fa4" method="POST">
+                    <input type="text" name="name" required placeholder="Nome">
+                    <input type="email" name="email" required placeholder="E-mail">
+                    <input name="message" placeholder="Mensagem" required class="message">
+                    
+                    <input type="hidden" name="_next"
+                        value="https://karina-santana.github.io/beco-do-baba/obrigado.html">
+                    <input type="hidden" name="_subject" value="AGENDAMENTO! Uhuuu!">
+                    <!-- <input type="hidden" name="_autoresponse" value="Obrigado pelo contato. Nossa equipe vai te responder o mais breve possível."> -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <button type="submit">Enviar</button>
+               </form>
+            </div>
+            <div class="booking-right">
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FBahia&showCalendars=0&showPrint=0&mode=WEEK&src=YmFlODQ4ZjIxYjU1Y2MyYzI3MWU5MTcxMDFkY2JmMjIyNGQxMDE3OTJlN2Y5Yjg2NjMyNmVkYTRkODZhNWZjMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237CB342" style="border-width:0" width="500" height="550" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+      </div>
+
+        
+      <!-- SECTION 4 -->
+      <div class="scroll-area">
+        <div></div>
+        <footer>
+            <ul>
+              <li>
+                <a href="https://www.instagram.com/becodobaba/" target="_blank"><i class="fa-brands fa-instagram"></i></i></a>
+              </li>
+              <li>
+                <a href="https://wa.me/5579999783566" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+              </li>
+              <li>
+                  <a href="https://www.facebook.com/becodobaba" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                </li>
+              <li>
+                <a href="https://www.youtube.com/@becodobaba1166" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+              </li>
+            </ul>
+            <p><i class="fa-regular fa-copyright"></i>Copyright - Todos os direitos reservados</p>
+          </footer>
+      </div>
+      
+    </section>
+    
+  </body>
+  <script src="global.js"></script>
+</html>

@@ -1,0 +1,223 @@
+:root {
+  --primaryColor: rgb(34, 34, 34);
+  --secondColor: #07cf0a;
+  --container-bg-color: #333;
+}
+
+/* GENERAL */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+/* SCROLLS */
+.scroll-container {
+  width: 100%;
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+}
+
+.scroll-area {
+  display: flex;
+  justify-content: center;
+  color: white;
+  scroll-snap-align: start;
+}
+
+.scroll-area:nth-of-type(1) {
+  background-color: white;
+  height: 100vh;
+}
+
+.scroll-area:nth-of-type(2) {
+  background-color: white;
+  height: 100vh;
+}
+
+.scroll-area:nth-of-type(3) {
+  background-color: white;
+  height: 100vh;
+}
+
+/* INTRO */
+.intro-container {
+  display: flex;
+  margin: 0 auto;
+}
+
+.intro-left img {
+  height: 100%;
+  left: 0;
+  margin-left: 0;
+}
+
+.intro-right {
+  color: black;
+  text-align: center;
+  margin: 50px;
+}
+
+.intro-right h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.intro-right h2 {
+  margin-bottom: 30px;
+}
+
+.adv-list {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.intro-right ul {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.intro-right ul li {
+  list-style-type: circle;
+  text-align: justify;
+}
+
+.intro-right h3 {
+  margin: 30px 0;
+}
+
+.intro-right a {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 2px;
+  transition: all 0.3s;
+  color: white;
+  background-color: var(--container-bg-color);
+}
+
+.intro-right a:hover {
+  background-color: var(--secondColor);
+}
+
+/* ADVANTAGES */
+.advantages-container {
+  display: flex;
+  margin: 0 auto;
+}
+
+.advantages-right img {
+  height: 100%;
+  right: 0;
+  margin-right: 0;
+}
+
+.advantages-left {
+  color: black;
+  text-align: center;
+  margin: 50px;
+  align-items: center;
+}
+
+.advantages-left h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.advantages-left h2 {
+  margin-bottom: 30px;
+}
+
+.advantages-left h2 span {
+  color: var(--secondColor);
+}
+
+.advantages-left p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* BOOKING */
+.booking-container {
+  margin: 0 auto;
+  display: flex;
+}
+
+.booking-left img {
+  height: 100%;
+  left: 0;
+  margin-left: 0;
+}
+
+.booking-middle {
+  color: black;
+  text-align: center;
+  margin: 40px 20px;
+}
+
+.booking-middle h1 {
+  margin-bottom: 40px;
+}
+
+.booking-middle p {
+  margin-bottom: 40px;
+}
+
+.booking-middle form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.booking-middle input {
+  padding: 8px;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.message {
+  padding-bottom: 50px;
+}
+
+.booking-middle button {
+  padding: 15px 0;
+  font-size: 16px;
+  background-color: var(--secondColor);
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-top: 17px;
+}
+
+.booking-middle button:hover {
+  color: black;
+}
+
+.booking-right {
+  color: black;
+  text-align: center;
+  margin-top: 40px;
+}
