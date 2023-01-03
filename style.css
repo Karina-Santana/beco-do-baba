@@ -187,7 +187,7 @@ ul {
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  padding: 20px 13%;
+  padding: 10px 13%;
   color: white;
   position: relative;
   overflow: hidden;
@@ -216,7 +216,7 @@ ul {
 }
 
 .reviews > h1 {
-  font-size: 24px;
+  font-size: 50px;
   position: relative;
   margin-bottom: 19px;
 }
@@ -237,7 +237,7 @@ ul {
   opacity: 0.8;
   max-width: 480px;
   line-height: 25px;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 
 .cards-1 {
