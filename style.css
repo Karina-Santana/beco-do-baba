@@ -50,7 +50,6 @@ ul {
 
 .scroll-area {
   display: flex;
-  justify-content: center;
   color: white;
   scroll-snap-align: start;
 }
@@ -58,15 +57,18 @@ ul {
 .scroll-area:nth-of-type(1) {
   background-color: white;
   height: 100vh;
+  justify-content: center;
 }
 
 .scroll-area:nth-of-type(2) {
   background-color: white;
   height: 100vh;
+  justify-content: start;
 }
 
 .scroll-area:nth-of-type(3) {
   height: 100vh;
+  justify-content: center;
 }
 
 .scroll-area:nth-of-type(4) {
@@ -77,6 +79,7 @@ ul {
 
 .scroll-area:nth-of-type(5) {
   height: 100vh;
+  justify-content: center;
 }
 
 /* FIRST SECTION - INTRO - SPLIT SCREEN */
@@ -184,7 +187,115 @@ ul {
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  padding: 70px 13%;
+  padding: 20px 13%;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.reviews::after,
+.reviews::before {
+  content: " ";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-color: var(--secondColor);
+  border-radius: 50%;
+}
+
+.reviews::after {
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, 50%);
+}
+
+.reviews::before {
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+}
+
+.reviews > h1 {
+  font-size: 24px;
+  position: relative;
+  margin-bottom: 19px;
+}
+
+.reviews > h1::after {
+  content: " ";
+  position: absolute;
+  width: 70px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: var(--secondColor);
+  left: 0;
+  bottom: -8px;
+}
+
+.reviews > p {
+  font-size: 15px;
+  opacity: 0.8;
+  max-width: 480px;
+  line-height: 25px;
+  margin-bottom: 70px;
+}
+
+.cards-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  position: relative;
+  z-index: 99;
+}
+
+.card-1 {
+  padding: 40px;
+  background-color: rgb(206, 206, 206, 0.192);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  box-shadow: 0 0 45px rgba(51, 51, 51, 0.577);
+  transition: all 0.5s ease;
+  text-align: center;
+}
+
+.card-1:hover {
+  transform: scale(1.06);
+  background-color: rgba(255, 255, 255, 0.733);
+  color: #333;
+}
+
+.card-1 img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid var(--secondColor);
+}
+
+.card-1 h2 {
+  font-size: 18px;
+  /* color: var(--secondColor); */
+  margin: 4px 0 0px 0;
+}
+
+.card-1 h3 {
+  font-size: 16px;
+  opacity: 0.8;
+  margin: 4px 0 2px 0;
+}
+
+.card-1 p {
+  font-size: 15px;
+  opacity: 0.8;
+  line-height: 23px;
+  margin-top: 9px;
+}
+
+.ratings {
+  margin: 5px 0 15px 0;
+}
+
+.ratings .fa-star {
+  font-size: 19px;
 }
 
 /* THIRD SECTION - REVIEWS - MEDIA  */
