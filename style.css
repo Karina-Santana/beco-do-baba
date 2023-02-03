@@ -44,14 +44,14 @@ ul {
 .scroll-container {
   width: 100%;
   height: 100%;
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
   overflow-y: auto;
 }
 
 .scroll-area {
   display: flex;
   color: white;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 .scroll-area:nth-of-type(1) {
